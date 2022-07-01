@@ -12,6 +12,27 @@ code {
     monospace;
 }
 
+nav a {
+  display: inline-block;
+  margin: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: firebrick;
+  border-bottom: 2px solid firebrick;
+  transition: 0.1s;
+}
+
+nav a:hover,
+nav a:active {
+  color: tomato;
+  border-bottom: 2px solid tomato;
+}
+
+nav a.active {
+  background-color: black;
+  color: white;
+}
+
 .cards {
   list-style: none;
 }
@@ -28,9 +49,9 @@ code {
   opacity: 0.5;
 }
 
-.card button {
+/* .card button {
   margin-top: 0.5rem;
-}
+} */
 
 @media (min-width: 768px) {
   .cards {
@@ -54,4 +75,28 @@ code {
   .card {
     width: calc(20% - 2rem);
   }
+}
+
+.form {
+  margin: 1rem;
+  box-shadow: 2 0 7px 0 #ddd;
+  border-radius: 25px;
+  border: 3px solid black;
+  width: 25%;
+  background: #ccc;
+  padding: 25px;
+  text-align: left;
+}
+
+.button {
+  margin: 0 1rem 0 1rem
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
