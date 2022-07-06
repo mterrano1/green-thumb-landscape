@@ -10,30 +10,20 @@ class ReviewsController < ApplicationController
         render json: reviews, include: :plant
     end
 
-    #POST /plants/:plant_id/reviews
-    # def create
-    #     plant = find_plant
-    #     review = plant.reviews.create(review_paramsr)
-    #     render json: review, status: :created 
-    # end
+    # POST /plants/:plant_id/reviews
+    def create
+        review = @current_user.reviews.create!(review_params)
+        render json: review, status: :created 
+    end
 
     private
     
     def find_plant
-        Plant.find(params[:id])
+        Plant.find(params[:plant_id])
     end
 
     def review_params
-        params.permit( :comment, :like, :plant_id, :user_id)
+        params.permit( :comment, :like, :plant_id)
     end
     
 end
-
-# reviews
-# t.integer "green_thumb"
-# t.integer "black_thumb"
-# t.string "comment"
-# t.boolean "like"
-# t.boolean "planted"
-# t.integer "plant_id"
-# t.integer "user_id"
