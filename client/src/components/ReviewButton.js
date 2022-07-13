@@ -1,19 +1,26 @@
 import React, { useContext } from 'react'
 import { UserContext } from './UserContext';
-import { Link } from 'react-router-dom';
 import EditReviewButton from './EditReviewButton';
 import AddReviewButton from './AddReviewButton';
+import DeleteReview from './DeleteReview';
 
-const ReviewButton = ({ plantId }) => {
+const ReviewButton = ({ plantId, plant }) => {
     const {user} = useContext(UserContext);
 
-    const filterPlant = user.reviews.filter(review => review.plant_id === plantId)
+    const filterReview = plant.reviews.filter(review => review.username === user.username)
 
-    const displayButton = filterPlant.length === 0 ? <AddReviewButton plantId={plantId} /> : <EditReviewButton />
+    const displayButton = filterReview.length === 0 ? 
+    <AddReviewButton plantId={plantId} /> : 
+    <EditReviewButton plantId={plantId} userReview={filterReview[0]} />
+
+    const deleteButton = filterReview.length === 0 ? '' : 
+    <DeleteReview plantId={plantId} userReview={filterReview[0]} />
+
 
     return (
         <div>
             {displayButton}
+            {deleteButton}
         </div>
     );
 }
