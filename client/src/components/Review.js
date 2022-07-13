@@ -10,7 +10,9 @@ const Review = ({ review }) => {
     return (
         <li className='reviewCard'>
             <hr/>
-            <span>{likeDislike}{review.comment}</span>
+            <p>{likeDislike}</p>
+            <p>{review.comment}</p>
+            <p style={{'fontStyle': 'italic'}}>by: {review.username}</p>
         </li>
     );
 }
