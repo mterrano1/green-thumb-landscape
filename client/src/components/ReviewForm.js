@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 const ReviewForm = () => {
-    const { loggedIn, addReview } = useContext(UserContext);
+    const { loggedIn, addReview, addUserPlant } = useContext(UserContext);
     const { plant_id } = useParams();
     const navigate = useNavigate();
     const [comment, setComment] = useState('');
@@ -27,6 +27,7 @@ const ReviewForm = () => {
         .then(data => {
             if (!data.errors) {
                 addReview(data)
+                addUserPlant(data.plant)
                 navigate(`/plants/${plant_id}`)
             } else {
                 setComment('')
@@ -67,23 +68,3 @@ const ReviewForm = () => {
 }
 
 export default ReviewForm;
-
-{/* <div>
-<form onSubmit={handleSubmit} className={'form'}>
-    <label>Would you recommend this plant to a friend?</label>
-    <input 
-        type='text'
-        id='like'
-        value={like}
-        onChange={e => setLike(e.target.value)}
-    /> <br/> <br/>
-    <label>Review</label>
-    <input 
-        type='text'
-        id='comment'
-        value={comment}
-        onChange={e => setComment(e.target.value)}
-    /> <br/> <br/>
-    <button type='submit'>Post review</button>
-</form>
-</div> */}
