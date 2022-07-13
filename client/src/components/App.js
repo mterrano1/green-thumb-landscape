@@ -8,6 +8,9 @@ import Plants from './Plants';
 import Plant from './Plant';
 import Login from './Login';
 import Signup from './Signup';
+import ReviewForm from './ReviewForm';
+import MyLandscape from './MyLandscape';
+import EditReview from './EditReview';
 
 const App = () => {
 
@@ -20,7 +23,10 @@ const App = () => {
         <Route exact path='/Login' element={<Login />} />
         <Route exact path='/Signup' element={<Signup />} />
         <Route exact path='/plants' element={<Plants />} />
+        <Route exact path='/landscape' element={<MyLandscape />} />
         <Route exact path='/plants/:id' element={<Plant />} />
+        <Route exact path='/plants/:plant_id/reviews/new' element={<ReviewForm />} />
+        <Route exact path='/plants/:plant_id/reviews/:id' element={<EditReview />} />
       </Routes>
     </UserProvider>
   );
