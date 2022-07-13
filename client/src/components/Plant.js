@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { UserContext } from './UserContext';
-import ReviewList from './ReviewList';
+import Reviews from './Reviews';
+import ReviewButton from './ReviewButton';
 
 const Plant = () => {
     const { id } = useParams();
@@ -18,11 +19,8 @@ const Plant = () => {
           <p>Sun Exposure: {plant.sun_exposure}</p>
           <p>Water Category: {plant.water_category}</p>
           <p>{plant.summary}</p>
-          {/* <ul>
-            {reviews.map((review) => (
-              <ReviewList key={review.id} review={review} />
-            ))}
-          </ul> */}
+          <ReviewButton plantId={plant.id} plant={plant} />
+          <Reviews key={plant.id} plant={plant} />
         </div>
     ));
 
