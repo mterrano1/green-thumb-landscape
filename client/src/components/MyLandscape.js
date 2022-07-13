@@ -20,6 +20,7 @@ const MyLandscape = () => {
             <div>
                 <hr/>
                 <h1 className='capitalize'>{user.username}'s Landscape</h1>
+                <hr/>
                 <ul className='cards'>
                     {landscapePlants}
                 </ul>

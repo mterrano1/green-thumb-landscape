@@ -7,9 +7,36 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* .topBar {
+  background-image: url('https://www.munsingerclemens.com/wp-content/uploads/2017/06/the-gardens-page-header-1200x300.jpg');
+  min-height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: right;
+} */
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.reviewImg {
+  height: 20px;
+  width: 20px;
+}
+
+.capitalize::first-letter {
+  text-transform: capitalize;
 }
 
 nav a {
@@ -37,6 +64,10 @@ nav a.active {
   list-style: none;
 }
 
+.reviewCard {
+  list-style: none;
+}
+
 .card {
   margin: 1rem;
 }
@@ -48,10 +79,6 @@ nav a.active {
 .card img:hover {
   opacity: 0.5;
 }
-
-/* .card button {
-  margin-top: 0.5rem;
-} */
 
 @media (min-width: 768px) {
   .cards {
@@ -76,6 +103,31 @@ nav a.active {
     width: calc(20% - 2rem);
   }
 }
+
+.container {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* .userCard {
+  margin: 1rem;
+  box-shadow: 0 0 7px 0 #ddd;
+  border-radius: 5px;
+  border: 3px solid black;
+  width: 400px;
+  background: #ccc;
+  padding: 5px;
+  text-align: center;
+} */
 
 .form {
   margin: 1rem;

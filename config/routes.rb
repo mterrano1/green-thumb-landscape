@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  resources :plants, only: [:index]
+  resources :plants, only: :index
   # resources :plants, only: [:index, :show] do
+
+  resources :reviews, only: [:create]
+
   resources :plants, only: :show do
     #nested resource for reviews
-    # resources :reviews, only: [:index, :show, :create, :update, :destroy]
-    resources :reviews
+    resources :reviews, only: [:index, :show, :update, :destroy]
+    # resources :reviews
   end
 
   # resources :users, only: :show

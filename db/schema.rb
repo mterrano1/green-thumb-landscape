@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2022_06_30_180703) do
 
   create_table "reviews", force: :cascade do |t|
     t.string "comment"
-    t.boolean "like"
+    t.integer "like"
     t.integer "plant_id"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false

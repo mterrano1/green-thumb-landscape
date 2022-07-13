@@ -7,6 +7,9 @@ const Plants = () => {
 
     return (
         <div>
+            <hr/>
+            <h1>Plants</h1>
+            <hr/>
             <ul className='cards'>
                 {plants.map((plant) => (
                     <PlantCard key={plant.id} plant={plant} />
