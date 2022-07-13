@@ -9,8 +9,6 @@ const LogoutButton = () => {
     const logoutUser = () => {
         fetch('/logout', {
             method: "DELETE",
-            // method: "DELETE",
-            // headers: { 'Content-Type': 'application/json'}
         })
         .then(() => {
             logout()
