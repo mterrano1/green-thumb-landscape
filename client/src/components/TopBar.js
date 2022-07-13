@@ -9,7 +9,7 @@ const TopBar = () => {
     const button = loggedIn ? <LogoutButton /> : <LoginButton />
 
     return (
-        <div>
+        <div className='topBar'>
             {button}
         </div>
     )
