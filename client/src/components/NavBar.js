@@ -7,6 +7,7 @@ const NavBar = () => {
         <nav>
             <NavLink exact to='/'>Home</NavLink>
             <NavLink exact to='/plants'>Plants</NavLink>
+            <NavLink exact to='/landscape'>My landscape</NavLink>
         </nav>
     );
 }
