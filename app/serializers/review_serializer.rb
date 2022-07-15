@@ -1,5 +1,4 @@
 class ReviewSerializer < ActiveModel::Serializer
-  # attributes :id, :comment, :like, :plant_id, :user_id
   attributes :id, :username, :comment, :like, :plant_id, :user_id
 
   def username
