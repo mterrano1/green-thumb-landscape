@@ -73,3 +73,9 @@ See my deployed app here
 -----------
 
 https://green-thumb-landscape.herokuapp.com/
+
+
+Check out my blog on the Active Record Validations I used in this app here
+-----------
+
+https://medium.com/@mterrano1/active-record-validations-5548dc5f616a
