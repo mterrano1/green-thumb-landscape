@@ -1,15 +1,5 @@
 class ReviewsController < ApplicationController
 
-    # def index
-    #     if params[:plant_id]
-    #         plant = find_plant
-    #         reviews = plant.reviews
-    #     else
-    #         reviews = Review.all
-    #     end
-    #     render json: reviews, include: :plant
-    # end
-
     # POST /plants/:plant_id/reviews
     def create
         review = @current_user.reviews.create!(review_params)
